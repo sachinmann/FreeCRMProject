@@ -48,6 +48,14 @@ public class LoginPageTest extends TestBase {
 		System.out.println("Passed");
 	}
 	
+	@Test(priority=4)
+	public void demo()
+	{
+		
+		System.out.println("demo");
+	}
+	
+	
 	@AfterMethod()
 	public void tearDown()
 	{
