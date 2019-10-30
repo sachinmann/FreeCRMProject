@@ -53,6 +53,8 @@ public class LoginPageTest extends TestBase {
 	{
 		
 		System.out.println("demo");
+		System.out.println("demo1");
+		
 	}
 	
 	
