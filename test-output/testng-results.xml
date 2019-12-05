@@ -1,49 +1,325 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="3" ignored="0" total="10" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25617" started-at="2019-10-28T20:33:50Z" finished-at="2019-10-28T20:34:16Z">
+  <suite name="Free CRM Application Test Automation suite" duration-ms="270031" started-at="2019-12-05T11:56:35 EST" finished-at="2019-12-05T12:01:05 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25617" started-at="2019-10-28T20:33:50Z" finished-at="2019-10-28T20:34:16Z">
-      <class name="com.crm.qa.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="setUp" is-config="true" duration-ms="8904" started-at="2019-10-28T16:33:50Z" finished-at="2019-10-28T16:33:59Z">
+    <test name="Free CRM Application Test" duration-ms="270031" started-at="2019-12-05T11:56:35 EST" finished-at="2019-12-05T12:01:05 EST">
+      <class name="com.crm.qa.testcases.CandlesPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CandlesPageTest@4e7dc304]" name="setUp" is-config="true" duration-ms="41132" started-at="2019-12-05T11:56:35 EST" finished-at="2019-12-05T11:57:16 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="loginPageTitleTest" duration-ms="40" started-at="2019-10-28T16:33:59Z" finished-at="2019-10-28T16:33:59Z">
+        <test-method status="FAIL" signature="sortByStarRatingTest()[pri:0, instance:com.crm.qa.testcases.CandlesPageTest@4e7dc304]" name="sortByStarRatingTest" duration-ms="35" started-at="2019-12-05T12:01:05 EST" finished-at="2019-12-05T12:01:05 EST">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+at com.crm.qa.pages.CandlesPage.sortByStarRating(CandlesPage.java:32)
+at com.crm.qa.testcases.CandlesPageTest.sortByStarRatingTest(CandlesPageTest.java:40)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortByStarRatingTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CandlesPageTest@4e7dc304]" name="tearDown" is-config="true" duration-ms="2" started-at="2019-12-05T12:01:05 EST" finished-at="2019-12-05T12:01:05 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.testcases.CandlesPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="setUp" is-config="true" duration-ms="15959" started-at="2019-12-05T11:58:28 EST" finished-at="2019-12-05T11:58:44 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateWelcomeNameTest()[pri:1, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="validateWelcomeNameTest" duration-ms="17534" started-at="2019-12-05T11:58:44 EST" finished-at="2019-12-05T11:59:02 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateWelcomeNameTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="1073" started-at="2019-12-05T11:59:02 EST" finished-at="2019-12-05T11:59:03 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="setUp" is-config="true" duration-ms="21545" started-at="2019-12-05T11:59:03 EST" finished-at="2019-12-05T11:59:24 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validateclickOnSkincare()[pri:2, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="validateclickOnSkincare" duration-ms="5183" started-at="2019-12-05T11:59:24 EST" finished-at="2019-12-05T11:59:30 EST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a class="main sc" href="https://www.fragrancenet.com/skincare" data-garg="...">Skincare</a> is not clickable at point (392, 191). Other element would receive the click: <div class="modal-body cf">...</div>
+  (Session info: chrome=78.0.3904.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\sacmann\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61249}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b83ff88313ba3e456cc4e6c1aeaae334]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="main sc" href="https://www.fragrancenet.com/skincare" data-garg="...">Skincare</a> is not clickable at point (392, 191). Other element would receive the click: <div class="modal-body cf">...</div>
+  (Session info: chrome=78.0.3904.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\sacmann\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61249}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b83ff88313ba3e456cc4e6c1aeaae334
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.crm.qa.pages.HomePage.clickOnSkincare(HomePage.java:41)
+at com.crm.qa.testcases.HomePageTest.validateclickOnSkincare(HomePageTest.java:46)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateclickOnSkincare -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="1034" started-at="2019-12-05T11:59:30 EST" finished-at="2019-12-05T11:59:31 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="setUp" is-config="true" duration-ms="27041" started-at="2019-12-05T11:59:31 EST" finished-at="2019-12-05T11:59:58 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateBestSellerTextTest()[pri:3, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="validateBestSellerTextTest" duration-ms="40" started-at="2019-12-05T11:59:58 EST" finished-at="2019-12-05T11:59:58 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBestSellerTextTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="956" started-at="2019-12-05T11:59:58 EST" finished-at="2019-12-05T11:59:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="setUp" is-config="true" duration-ms="30106" started-at="2019-12-05T11:59:59 EST" finished-at="2019-12-05T12:00:29 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateHaircareLinkTest()[pri:4, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="validateHaircareLinkTest" duration-ms="61" started-at="2019-12-05T12:00:29 EST" finished-at="2019-12-05T12:00:29 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHaircareLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="1025" started-at="2019-12-05T12:00:29 EST" finished-at="2019-12-05T12:00:30 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="setUp" is-config="true" duration-ms="29084" started-at="2019-12-05T12:00:30 EST" finished-at="2019-12-05T12:00:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validateCandlesClickTest()[pri:5, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="validateCandlesClickTest" duration-ms="5177" started-at="2019-12-05T12:00:59 EST" finished-at="2019-12-05T12:01:04 EST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class=" c" data-garg="...">Candles</span> is not clickable at point (967, 191). Other element would receive the click: <div class="backdrop open"></div>
+  (Session info: chrome=78.0.3904.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\sacmann\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8aebf26cbc248771386d50fab8d824f7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class=" c" data-garg="...">Candles</span> is not clickable at point (967, 191). Other element would receive the click: <div class="backdrop open"></div>
+  (Session info: chrome=78.0.3904.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LNAR-PF0U6F79', ip: '10.147.110.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\sacmann\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8aebf26cbc248771386d50fab8d824f7
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at com.crm.qa.pages.HomePage.validateCandlesClick(HomePage.java:60)
+at com.crm.qa.testcases.HomePageTest.validateCandlesClickTest(HomePageTest.java:68)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCandlesClickTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="934" started-at="2019-12-05T12:01:04 EST" finished-at="2019-12-05T12:01:05 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
+      <class name="com.crm.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="setUp" is-config="true" duration-ms="11112" started-at="2019-12-05T11:57:16 EST" finished-at="2019-12-05T11:57:27 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="loginPageTitleTest" duration-ms="26" started-at="2019-12-05T11:57:27 EST" finished-at="2019-12-05T11:57:27 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="tearDown" is-config="true" duration-ms="933" started-at="2019-10-28T16:33:59Z" finished-at="2019-10-28T16:34:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="tearDown" is-config="true" duration-ms="1055" started-at="2019-12-05T11:57:27 EST" finished-at="2019-12-05T11:57:29 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="setUp" is-config="true" duration-ms="6702" started-at="2019-10-28T16:34:00Z" finished-at="2019-10-28T16:34:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="setUp" is-config="true" duration-ms="14501" started-at="2019-12-05T11:57:29 EST" finished-at="2019-12-05T11:57:43 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="crmLogoImageTest()[pri:2, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="crmLogoImageTest" duration-ms="234" started-at="2019-10-28T16:34:07Z" finished-at="2019-10-28T16:34:07Z">
+        <test-method status="PASS" signature="helpLinkTest()[pri:2, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="helpLinkTest" duration-ms="76" started-at="2019-12-05T11:57:43 EST" finished-at="2019-12-05T11:57:43 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- crmLogoImageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="tearDown" is-config="true" duration-ms="958" started-at="2019-10-28T16:34:07Z" finished-at="2019-10-28T16:34:08Z">
+        </test-method> <!-- helpLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="tearDown" is-config="true" duration-ms="1173" started-at="2019-12-05T11:57:43 EST" finished-at="2019-12-05T11:57:44 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="setUp" is-config="true" duration-ms="6909" started-at="2019-10-28T16:34:08Z" finished-at="2019-10-28T16:34:15Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="setUp" is-config="true" duration-ms="16576" started-at="2019-12-05T11:57:44 EST" finished-at="2019-12-05T11:58:01 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="loginTest" duration-ms="1" started-at="2019-10-28T16:34:15Z" finished-at="2019-10-28T16:34:15Z">
+        <test-method status="PASS" signature="fragnanceLogoTest()[pri:3, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="fragnanceLogoTest" duration-ms="126" started-at="2019-12-05T11:58:01 EST" finished-at="2019-12-05T11:58:01 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fragnanceLogoTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="tearDown" is-config="true" duration-ms="995" started-at="2019-12-05T11:58:01 EST" finished-at="2019-12-05T11:58:02 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="setUp" is-config="true" duration-ms="14973" started-at="2019-12-05T11:58:02 EST" finished-at="2019-12-05T11:58:17 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest()[pri:4, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="loginTest" duration-ms="9938" started-at="2019-12-05T11:58:17 EST" finished-at="2019-12-05T11:58:27 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@d8355a8]" name="tearDown" is-config="true" duration-ms="892" started-at="2019-10-28T16:34:15Z" finished-at="2019-10-28T16:34:16Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@64729b1e]" name="tearDown" is-config="true" duration-ms="1397" started-at="2019-12-05T11:58:27 EST" finished-at="2019-12-05T11:58:28 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Free CRM Application Test -->
+  </suite> <!-- Free CRM Application Test Automation suite -->
 </testng-results>

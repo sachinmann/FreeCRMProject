@@ -31,31 +31,30 @@ public class LoginPageTest extends TestBase {
 	public void loginPageTitleTest()
 	{
 		String pagetitle= loginpage.validateLoginPageTitle();
-		Assert.assertEquals(pagetitle, "CRMPRO - CRM software for customer relationship management, sales, and support.");
+		Assert.assertEquals(pagetitle, "Perfume, Cologne & Discount Perfume");
 	}
 	
 	@Test(priority=2)
-	public void crmLogoImageTest()
+	public void helpLinkTest()
 	{
-		boolean flag =loginpage.validateCRMImage();
-		Assert.assertTrue(flag);
+		String str= loginpage.validateHelpLink();
+		Assert.assertEquals(str, "HELP");
 	}
 	
 	@Test(priority=3)
-	public void loginTest()
+	public void fragnanceLogoTest()
 	{
-		//homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
-		System.out.println("Passed");
+		boolean flag =loginpage.validateFragnanceLogo();
+		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=4)
-	public void demo()
+	public void loginTest()
 	{
-		
-		System.out.println("demo");
-		System.out.println("demo1");
-		
+		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
+		System.out.println("Passed");
 	}
+	
 	
 	
 	@AfterMethod()
